@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Todos</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        button{
+            border-radius: 5px;
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            cursor: pointer;
+            height: 30px;
+            width: 8%;
+        }
+        button:hover{
+            background-color: black;
+            color: white;  
+        }
+    </style>
+</head>
+<body>
+    <div id="bodyDiv">
+        <button>Show Products</button>
+        <div id="sortDiv">
+            <p style="font-size: 20px;margin-top: 18px;"><b>Sort By :</b></p>
+            <div id="selectionDiv">
+            <select style="height: 100%; width: 20%;" id="valueDiv">
+                <option value="">All</option>
+                <option value="rating">Rating</option>
+                <option value="Low to High">Price:Low to High</option>
+                <option value="High to Low">Price:High to Low</option>
+            </select>
+            </div>
+            <input type="text" id="search" placeholder="Search for products" onchange="getData()">
+            <!-- <button onclick="getData()">Search</button> -->
+        </div>
+        <div id="mainContentDiv">
+            <div id="prds"></div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
